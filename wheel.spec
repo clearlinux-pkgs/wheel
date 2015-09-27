@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.26.0
-Release  : 12
+Release  : 14
 URL      : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Summary  : A built-package format for Python.
@@ -44,6 +44,7 @@ bin components for the wheel package.
 %package python
 Summary: python components for the wheel package.
 Group: Default
+Requires: keyring-python
 
 %description python
 python components for the wheel package.
