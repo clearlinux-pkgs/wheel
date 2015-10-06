@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.26.0
-Release  : 15
+Release  : 16
 URL      : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Summary  : A built-package format for Python.
