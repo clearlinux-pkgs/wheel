@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.26.0
-Release  : 17
+Release  : 18
 URL      : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/w/wheel/wheel-0.26.0.tar.gz
 Summary  : A built-package format for Python.
@@ -61,7 +61,7 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-#sed -i -e s/--cov=wheel// setup.cfg  ; pushd py2; py.test; popd
+sed -i -e s/--cov=wheel// setup.cfg  ; pushd py2; py.test; popd
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
