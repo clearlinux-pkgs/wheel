@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.30.0
-Release  : 32
+Release  : 33
 URL      : http://pypi.debian.net/wheel/wheel-0.30.0.tar.gz
 Source0  : http://pypi.debian.net/wheel/wheel-0.30.0.tar.gz
 Summary  : A built-package format for Python.
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : MIT
 Requires: wheel-bin
 Requires: wheel-legacypython
+Requires: wheel-python3
 Requires: wheel-python
 Requires: jsonschema
 Requires: keyring
@@ -62,9 +63,18 @@ legacypython components for the wheel package.
 Summary: python components for the wheel package.
 Group: Default
 Requires: wheel-legacypython
+Requires: wheel-python3
 
 %description python
 python components for the wheel package.
+
+
+%package python3
+Summary: python3 components for the wheel package.
+Group: Default
+
+%description python3
+python3 components for the wheel package.
 
 
 %prep
@@ -75,12 +85,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1505367848
+export SOURCE_DATE_EPOCH=1506869584
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1505367848
+export SOURCE_DATE_EPOCH=1506869584
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -100,5 +110,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
