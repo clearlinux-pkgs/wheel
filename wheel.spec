@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.30.0
-Release  : 36
+Release  : 37
 URL      : http://pypi.debian.net/wheel/wheel-0.30.0.tar.gz
 Source0  : http://pypi.debian.net/wheel/wheel-0.30.0.tar.gz
 Summary  : A built-package format for Python.
