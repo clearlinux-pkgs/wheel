@@ -1,3 +1,17 @@
+0.31.0
+======
+- Fixed displaying of errors on Python 3
+- Fixed single digit versions in wheel files not being properly recognized
+- Fixed wrong character encodings being used (instead of UTF-8) to read and
+  write ``RECORD`` (this sometimes crashed bdist_wheel too)
+- Enabled Zip64 support in wheels by default
+- Metadata-Version is now 2.1
+- Dropped DESCRIPTION.rst and metadata.json from the list of generated files
+- Dropped support for the non-standard, undocumented ``provides-extra`` and
+  ``requires-dist`` keywords in setup.cfg metadata
+- Deprecated all wheel signing and signature verification commands
+- Removed the (already defunct) ``tool`` extras from setup.py
+
 0.30.0
 ======
 - Added py-limited-api {cp32|cp33|cp34|...} flag to produce cpNN.abi3.{arch}
