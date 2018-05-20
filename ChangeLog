@@ -1,3 +1,7 @@
+0.31.1
+======
+- Fixed arch as ``None`` when converting eggs to wheels
+
 0.31.0
 ======
 - Fixed displaying of errors on Python 3
