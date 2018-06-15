@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.31.1
-Release  : 44
+Release  : 45
 URL      : http://pypi.debian.net/wheel/wheel-0.31.1.tar.gz
 Source0  : http://pypi.debian.net/wheel/wheel-0.31.1.tar.gz
 Summary  : A built-package format for Python.
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : MIT
 Requires: wheel-bin
 Requires: wheel-python3
+Requires: wheel-license
 Requires: wheel-python
 Requires: keyring
 Requires: pyxdg
@@ -19,7 +20,6 @@ BuildRequires : jsonschema-python
 BuildRequires : keyring-python
 BuildRequires : pbr
 BuildRequires : pip
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
@@ -42,9 +42,18 @@ BuildRequires : setuptools
 %package bin
 Summary: bin components for the wheel package.
 Group: Binaries
+Requires: wheel-license
 
 %description bin
 bin components for the wheel package.
+
+
+%package license
+Summary: license components for the wheel package.
+Group: Default
+
+%description license
+license components for the wheel package.
 
 
 %package python
@@ -73,11 +82,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526828310
+export SOURCE_DATE_EPOCH=1529094395
 python3 setup.py build -b py3
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/wheel
+cp LICENSE.txt %{buildroot}/usr/share/doc/wheel/LICENSE.txt
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -89,6 +100,10 @@ echo ----[ mark ]----
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/wheel
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/wheel/LICENSE.txt
 
 %files python
 %defattr(-,root,root,-)
