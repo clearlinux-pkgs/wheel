@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.32.0
-Release  : 52
+Release  : 53
 URL      : https://files.pythonhosted.org/packages/68/f0/545cbeae75f248c4ad7c2d062672cd7e046dd325a81b74fc02c62450d133/wheel-0.32.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/68/f0/545cbeae75f248c4ad7c2d062672cd7e046dd325a81b74fc02c62450d133/wheel-0.32.0.tar.gz
 Summary  : A built-package format for Python.
@@ -14,9 +14,10 @@ Requires: wheel-bin
 Requires: wheel-python3
 Requires: wheel-license
 Requires: wheel-python
+Requires: keyring
 BuildRequires : buildreq-distutils3
 BuildRequires : jsonschema-python
-BuildRequires : keyring-python
+BuildRequires : keyring
 
 %description
 =====
@@ -67,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538246090
+export SOURCE_DATE_EPOCH=1538251452
 python3 setup.py build
 
 %install
