@@ -1,5 +1,8 @@
 # This file contains recursive sources that require this package
+astunparse
 pypandoc
 retry
 tensorboard
 tensorflow
+tensorflow-estimator
+tensorflow-probability
