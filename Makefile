@@ -1,5 +1,5 @@
 PKG_NAME := wheel
-URL = https://files.pythonhosted.org/packages/aa/ce/bd5f6133683a357462c39554b771d90315319300afade7496c9b96fedb05/wheel-0.33.3.tar.gz
+URL = https://files.pythonhosted.org/packages/1d/b0/f478e80aeace42fe251225a86752799174a94314c4a80ebfc5bf0ab1153a/wheel-0.33.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

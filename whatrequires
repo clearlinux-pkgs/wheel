@@ -1,7 +1,10 @@
 # This file contains recursive sources that require this package
 astunparse
+awscli
+botocore
 pypandoc
 retry
+scikit-learn
 tensorboard
 tensorflow
 tensorflow-estimator
