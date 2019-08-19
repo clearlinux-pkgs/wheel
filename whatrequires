@@ -2,8 +2,11 @@
 astunparse
 awscli
 botocore
+grpcio
 pypandoc
+python-mock
 retry
+scikit-build
 scikit-learn
 tensorboard
 tensorflow
