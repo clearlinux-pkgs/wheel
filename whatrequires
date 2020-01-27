@@ -1,14 +1,20 @@
 # This file contains recursive sources that require this package
+PyWavelets
 astunparse
 awscli
 botocore
+django-nose
+grpc
 grpcio
+librealsense
 pypandoc
 python-mock
 retry
 scikit-build
-scikit-learn
 tensorboard
 tensorflow
+tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
+tensorflow-serving
+wheel
