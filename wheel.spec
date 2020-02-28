@@ -4,7 +4,7 @@
 #
 Name     : wheel
 Version  : 0.34.2
-Release  : 71
+Release  : 72
 URL      : https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz
 Summary  : A built-package format for Python
@@ -29,8 +29,36 @@ BuildRequires : wheel
 %description
 wheel
 =====
+
 This library is the reference implementation of the Python wheel packaging
 standard, as defined in `PEP 427`_.
+
+It has two different roles:
+
+#. A setuptools_ extension for building wheels that provides the
+   ``bdist_wheel`` setuptools command
+#. A command line tool for working with wheel files
+
+It should be noted that wheel is **not** intended to be used as a library, and
+as such there is no stable, public API.
+
+.. _PEP 427: https://www.python.org/dev/peps/pep-0427/
+.. _setuptools: https://pypi.org/project/setuptools/
+
+Documentation
+-------------
+
+The documentation_ can be found on Read The Docs.
+
+.. _documentation: https://wheel.readthedocs.io/
+
+Code of Conduct
+---------------
+
+Everyone interacting in the wheel project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
+
+.. _PyPA Code of Conduct: https://www.pypa.io/en/latest/code-of-conduct/
 
 %package bin
 Summary: bin components for the wheel package.
@@ -62,6 +90,7 @@ python components for the wheel package.
 Summary: python3 components for the wheel package.
 Group: Default
 Requires: python3-core
+Provides: pypi(wheel)
 
 %description python3
 python3 components for the wheel package.
@@ -76,7 +105,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580496168
+export SOURCE_DATE_EPOCH=1582902933
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
