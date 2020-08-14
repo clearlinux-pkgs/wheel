@@ -1,13 +1,17 @@
 # This file contains recursive sources that require this package
+PyNaCl
 PyWavelets
 astunparse
 awscli
 botocore
+click-datetime
 django-nose
 grpc
 grpcio
 librealsense
+performance
 pypandoc
+pyside2-setup
 python-mock
 retry
 scikit-build
@@ -17,4 +21,5 @@ tensorflow-addons
 tensorflow-estimator
 tensorflow-probability
 tensorflow-serving
+testfixtures
 wheel
