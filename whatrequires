@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 PyNaCl
 PyWavelets
+Rtree
 astunparse
 awscli
 botocore
@@ -8,11 +9,13 @@ click-datetime
 django-nose
 grpc
 grpcio
+jupyter-packaging
 librealsense
 pyside2-setup
 python-dotenv
 python-mock
 retry
+setuptools-rust
 tensorboard
 tensorflow
 tensorflow-addons
