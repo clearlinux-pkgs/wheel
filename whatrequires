@@ -2,9 +2,8 @@
 PyNaCl
 PyWavelets
 Rtree
+ansible
 astunparse
-awscli
-botocore
 click-datetime
 django-nose
 grpc
