@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+Markdown
 PyNaCl
 PyWavelets
 Rtree
@@ -6,19 +7,18 @@ ansible
 astunparse
 click-datetime
 django-nose
+filelock
 grpc
-grpcio
+jsonschema
 jupyter-packaging
 librealsense
+mpi4py
+mpmath
+packaging
 pyside2-setup
 python-dotenv
+python-install
 python-mock
 retry
-setuptools-rust
-tensorboard
-tensorflow
-tensorflow-addons
-tensorflow-estimator
-tensorflow-probability
-tensorflow-serving
+soupsieve
 wheel
